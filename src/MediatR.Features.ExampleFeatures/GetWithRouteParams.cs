@@ -1,19 +1,19 @@
-﻿using System;
+﻿using MediatR.Features.Abstractions.Attributes;
+using MediatR.Features.Abstractions;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 using System.Threading.Tasks;
-using MediatR.Features.Abstractions;
-using MediatR.Features.Abstractions.Attributes;
+using System.Threading;
+using System;
 
 namespace MediatR.Features.ExampleFeatures;
 
-public class Get
+public class GetWithRouteParams
 {
-    [HttpEndpoint("GET", "/widgets")]
+    [HttpEndpoint("GET", "/widgets/{name}")]
     public class Query : QueryBase<IEnumerable<Model>>
     {
-        public int FromQuery { get; set; } = 5;
+        public string Name { get; set; }
     }
 
     public class Handler : IRequestHandler<Query, IEnumerable<Model>>
@@ -23,12 +23,12 @@ public class Get
             CancellationToken cancellationToken)
         {
             IEnumerable<Model> result = Enumerable
-                .Range(1, request.FromQuery)
+                .Range(1, 5)
                 .Select(x => new Model
                 {
                     Id = Guid.NewGuid(),
                     Date = DateTime.Now,
-                    Name = "name" + x
+                    Name = request.Name + x
                 });
 
             return Task.FromResult(result);
