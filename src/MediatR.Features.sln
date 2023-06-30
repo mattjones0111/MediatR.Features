@@ -5,11 +5,15 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.Features.Abstractions", "MediatR.Features.Abstractions\MediatR.Features.Abstractions.csproj", "{3D1D3583-3E51-45C7-8762-1C8F00EA94B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR.Features.ExampleApi", "MediatR.Features.ExampleApi\MediatR.Features.ExampleApi.csproj", "{467C2A7E-F011-4733-B4C4-AD43E4387466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.Features.ExampleApi", "MediatR.Features.ExampleApi\MediatR.Features.ExampleApi.csproj", "{467C2A7E-F011-4733-B4C4-AD43E4387466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR.Features.AspNetCore", "MediatR.Features.AspNetCore\MediatR.Features.AspNetCore.csproj", "{8BE726A5-5FFE-43B7-BDCC-8C2FAD868F40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.Features.AspNetCore", "MediatR.Features.AspNetCore\MediatR.Features.AspNetCore.csproj", "{8BE726A5-5FFE-43B7-BDCC-8C2FAD868F40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR.Features.ExampleFeatures", "MediatR.Features.ExampleFeatures\MediatR.Features.ExampleFeatures.csproj", "{E7879CEC-F601-4E7A-AF9A-E06F89E2ECA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatR.Features.ExampleFeatures", "MediatR.Features.ExampleFeatures\MediatR.Features.ExampleFeatures.csproj", "{E7879CEC-F601-4E7A-AF9A-E06F89E2ECA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "Utilities\Utilities.csproj", "{7234C745-7110-4714-86FD-7CADB7DCA2F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatR.Features.IntegrationTests", "MediatR.Features.IntegrationTests\MediatR.Features.IntegrationTests.csproj", "{28BF96DA-CEAE-47EF-87D8-5F3904FE06A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{E7879CEC-F601-4E7A-AF9A-E06F89E2ECA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7879CEC-F601-4E7A-AF9A-E06F89E2ECA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7879CEC-F601-4E7A-AF9A-E06F89E2ECA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7234C745-7110-4714-86FD-7CADB7DCA2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7234C745-7110-4714-86FD-7CADB7DCA2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7234C745-7110-4714-86FD-7CADB7DCA2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7234C745-7110-4714-86FD-7CADB7DCA2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28BF96DA-CEAE-47EF-87D8-5F3904FE06A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28BF96DA-CEAE-47EF-87D8-5F3904FE06A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28BF96DA-CEAE-47EF-87D8-5F3904FE06A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28BF96DA-CEAE-47EF-87D8-5F3904FE06A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

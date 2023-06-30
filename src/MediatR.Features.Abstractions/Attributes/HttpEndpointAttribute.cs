@@ -1,4 +1,5 @@
 ﻿using System;
+using Utilities;
 
 namespace MediatR.Features.Abstractions.Attributes;
 
@@ -6,11 +7,14 @@ namespace MediatR.Features.Abstractions.Attributes;
 public class HttpEndpointAttribute : Attribute
 {
     public string Method { get; }
-    public string Route { get; }
+    public string RoutePattern { get; }
 
-    public HttpEndpointAttribute(string method, string route)
+    public HttpEndpointAttribute(string method, string routePattern)
     {
+        Ensure.IsNotNullOrEmpty(method, nameof(method));
+        Ensure.IsNotNullOrEmpty(routePattern, nameof(routePattern));
+
         Method = method;
-        Route = route;
+        RoutePattern = routePattern;
     }
 }
