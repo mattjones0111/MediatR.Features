@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MediatR.Features.Abstractions;
 using MediatR.Features.Abstractions.Attributes;
 
-namespace MediatR.Features.ExampleFeatures;
+namespace MediatR.Features.ExampleFeatures.Features.Widgets;
 
 public class Put
 {
