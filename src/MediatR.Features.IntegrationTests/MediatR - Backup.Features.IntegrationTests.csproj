@@ -23,4 +23,8 @@
     <ProjectReference Include="..\MediatR.Features.ExampleApi\MediatR.Features.ExampleApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>

@@ -4,6 +4,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
+using MediatR.Features.IntegrationTests.Fixtures;
 
 namespace MediatR.Features.IntegrationTests;
 
@@ -25,6 +26,9 @@ public class CommandTests
             "/widgets/1",
             new StringContent("{}", Encoding.UTF8, "application/json"));
 
-        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
+        response.StatusCode.Should().Be(HttpStatusCode.Created);
+        response.Headers.Location
+            .Should().NotBeNull()
+            .And.Subject.Should().Be("http://localhost/widgets/1");
     }
 }

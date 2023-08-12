@@ -54,7 +54,20 @@ public sealed class CommandFeature : FeatureBase
 
         if (result is CommandResult commandResult)
         {
+            HttpStatusCode code = commandResult.StatusCode;
             context.Response.StatusCode = (int)commandResult.StatusCode;
+
+            if (code == HttpStatusCode.Created)
+            {
+                var uriBuilder = new UriBuilder
+                {
+                    Scheme = context.Request.Scheme,
+                    Host = context.Request.Host.Host,
+                    Port = context.Request.Host.Port.GetValueOrDefault(80),
+                    Path = commandResult.CreatedObjectUrl
+                };
+                context.Response.Headers.Location = uriBuilder.Uri.ToString();
+            }
         }
         else
         {
