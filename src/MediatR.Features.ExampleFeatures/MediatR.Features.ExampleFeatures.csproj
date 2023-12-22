@@ -8,4 +8,9 @@
     <ProjectReference Include="..\MediatR.Features.Abstractions\MediatR.Features.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Animals\" />
+    <Folder Include="Features\People\" />
+  </ItemGroup>
+
 </Project>

@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MediatR.Features.ExampleApi\MediatR.Features.ExampleApi.csproj" />
+    <ProjectReference Include="..\MediatR.Features.ExampleContracts\MediatR.Features.ExampleContracts.csproj" />
   </ItemGroup>
 
 </Project>
